@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Site Metas -->
+    <title>Tech Blog - Stylish Magazine Blog Template</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+    <!------ Include the above in your HEAD tag ---------->
+
+    <!-- Design fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+
+    <!-- FontAwesome Icons core CSS -->
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/userProfile.css" rel="stylesheet">
+    <!-- FontAwesome Icons core CSS -->
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Responsive styles for this template -->
+    <link href="../css/responsive.css" rel="stylesheet">
+
+    <!-- Colors for this template -->
+    <link href="../css/colors.css" rel="stylesheet">
+
+    <link href="../css/style.css" rel="stylesheet">
+
+    <!-- Version Tech CSS for this template -->
+    <link href="../css/version/tech.css" rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet" />
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+</head>
+
+<body>
+    <!-- Nhúng header -->
+    <div id="header"></div>
+
+    <div style="margin-top: 5%; width: 90%;" class="container emp-profile">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="profile-head">
+                    <h4>
+                        Admin
+                    </h4>
+                    <form id="search-form" class="d-flex" role="search" style="width: 40%; margin-left: auto; margin-right: 100px;">
+                        <input id="search-input" class="form-control me-2" type="search" placeholder="Search"
+                            aria-label="Search" />
+                        <button class="btn btn-primary" type="submit">
+                            Search
+                        </button>
+                    </form>
+                    <button style="margin-left: 88%; margin-top: 10px;" id="refesh-btn" 
+                            type="button" class="btn btn-primary">
+                            Refesh
+                        </button>
+                    <!-- <p class="proile-rating">RANKINGS : <span>8/10</span></p> -->
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                aria-controls="profile" aria-selected="true">Total</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="posts-tab" data-toggle="tab" href="#posts" role="tab"
+                                aria-controls="posts" aria-selected="false">Total User</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tab-content profile-tab" id="myTabContent">
+                    <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Total View</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input style="border: 0px;" readonly name="totalView" id="totalView" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Total Post</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input style="border: 0px;" readonly name="totalPost" id="totalPost" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Total Comment</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input style="border: 0px;" readonly name="totalComment" id="totalComment" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Total Point</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input style="border: 0px;" readonly name="totalPoint" id="totalPoint" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Total User</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input style="border: 0px;" readonly name="totalUser" id="totalUser" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-left: 20px;" class="tab-pane fade" id="posts" role="tabpanel"
+                        aria-labelledby="posts-tab">
+                        <div class="page-content page-container" id="page-content">
+                            <div class="padding">
+                                <div class="row container d-flex justify-content-center">
+                                    <div class="col-md-12">
+                                        <div class="box">
+                                            <!-- /.box-header -->
+                                            <div class="box-body">
+                                                <table style="text-align: center; margin-left: 15%;"
+                                                    class="table table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="width: 10px">#</th>
+                                                            <th>Id</th>
+                                                            <th>Avatar</th>
+                                                            <th>Display Name</th>
+                                                            <th>Username</th>
+                                                            <th>Role</th>
+                                                            <th>Phone Number</th>
+                                                            <th>Email</th>
+                                                            <th>Birthday</th>
+                                                            <th>Gender</th>
+                                                            <th>Active</th>
+                                                            <th>Total Post</th>
+                                                            <th>Total Comment</th>
+
+                                                            <th style="width: 40px"></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="idTable">
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <nav aria-label="Page navigation" style="margin-left: 100%;">
+                                                    <ul id="pagination" class="pagination justify-content-start">
+                                                    </ul>
+                                                </nav>
+                                            </div><!-- end col -->
+                                        </div><!-- end row -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- The Modal -->
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content">
+                <div class="w3-container">
+                    <div class="modal-body">
+                        <form id="add-prod-form">
+                            <div id="role" class="mb-3">
+                                <label for="role-name" class="col-form-label">Role:</label>
+                                <select id="role-name" class="form-select" aria-label="Default select example">
+                                    <option selected>Role</option>
+                                </select>
+                            </div>
+                            <div id="active" class="mb-3">
+                                <label for="active-name" class="col-form-label">Active:</label>
+                                <select id="active-name" class="form-select" aria-label="Default select example">
+                                    <option value="false">Deactive</option>
+                                    <option value="true">Active</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="document.getElementById('id01').style.display='none'" type="button"
+                            class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                        <button id="update-prod-btn" onclick="document.getElementById('id01').style.display='none'"
+                            type="button" class="btn btn-primary">
+                            Update
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
+
+    <script>
+        $(() => {
+            $("#header").load("../Utils/header.html")
+            $("#footer").load("../Utils/footer.html")
+        })
+    </script>
+
+    <script>
+
+        var currentUser;
+        var userId;
+
+        function detailUser(model) {
+            currentUser = {
+                roleId: model.getAttribute("data-role-id"),
+                active: model.getAttribute("data-active-user"),
+            };
+            $("#role-name").val(currentUser.roleId);
+            $("#active-name").val(currentUser.active);
+
+            userId = model.getAttribute("data-user-id");
+            document.getElementById('id01').style.display = 'block'
+        }
+
+        $(document).ready(() => {
+            loadDatatable();
+
+            $.ajax({
+                url: "https://localhost:7065/api/Admin/GetRole",
+                method: "GET",
+                contentType: "application/json",
+                headers: {
+                    "Authorization": "Bearer " + localStorage.getItem('token')
+                },
+                success: (response) => {
+                    $("#role-name").append(
+                        response.map(
+                            (cat) =>
+                                `<option value="${cat.id}">${cat.name}</option>`
+                        )
+                    );
+
+                },
+                error: function (xhr, status, error) {
+                    SlimNotifierJs.notification(
+                        "error",
+                        "Error",
+                        "Failed to load role",
+                        3000
+                    );
+                },
+            });
+
+            $.ajax({
+                url: "https://localhost:7065/api/Admin/GetTotalIndex",
+                method: "GET",
+                contentType: "application/json",
+                headers: {
+                    "Authorization": "Bearer " + localStorage.getItem('token')
+                },
+                success: (response) => {
+                    document.getElementById("totalPost").value = response?.totalPost;
+                    document.getElementById("totalView").value = response?.totalView;
+                    document.getElementById("totalComment").value = response?.totalComment;
+                    document.getElementById("totalPoint").value = response?.totalPoint;
+                    document.getElementById("totalUser").value = response?.totalUser;
+
+
+                },
+                error: function (xhr, status, error) {
+                    SlimNotifierJs.notification(
+                        "error",
+                        "Error",
+                        "Failed to load category",
+                        3000
+                    );
+                },
+            });
+
+            $("#refesh-btn").click(() => {
+                loadDatatable();
+            });
+
+            var updateUser;
+            $("#update-prod-btn").click(() => {
+                updateUser = {
+                    _id: userId,
+                    role: $("#role-name").val(),
+                    active: $("#active-name").val(),
+                };
+
+                $.ajax({
+                    url: "https://localhost:7065/api/Admin/updateRoleAndActive",
+                    method: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify(updateUser),
+                    headers: {
+                        "Authorization": "Bearer " + localStorage.getItem('token')
+                    },
+                    success: (response) => {
+                        SlimNotifierJs.notification(
+                            "success",
+                            "Updated Successfully!",
+                            response,
+                            3000
+                        );
+                        loadDatatable()
+                    },
+                    error: function (xhr, status, error) {
+                        SlimNotifierJs.notification(
+                            "error",
+                            "Error",
+                            xhr.responseText,
+                            3000
+                        );
+                    },
+                });
+            });
+
+            if ($("#search-input").val() != null) {
+                $("#search-form").submit((e) => {
+                    e.preventDefault()
+                    function loadDataSearchtable() {
+                        $.ajax({
+                            url: "https://localhost:7065/api/Admin/SearchUser?page=" + page + "&pageSize=" + pageSize + "&keyword=" + $("#search-input").val(),
+                            method: "GET",
+                            headers: {
+                                "Authorization": "Bearer " + localStorage.getItem('token')
+                            },
+                            contentType: "application/json",
+                            success: function (response) {
+                                var data = response.results;
+                                var totalPages = response.totalPage;
+                                let tableContent = '';
+                                data.map((item, index) => {
+                                    tableContent += `<tr>
+                                    <td>${index}</td>
+                                    <td>${item?.id}</td>
+                                    <td><img src="${item?.avatar}"/></td>
+                                    <td>${item?.displayName}</td>
+                                    <td>${item?.name}</td>
+                                    <td>${item?.role}</td>
+                                    <td>${item?.phoneNumber}</td>
+                                    <td>${item?.email}</td>
+                                    <td>${getFormattedDate(item?.birth)}</td>
+                                    <td>${item?.gender == true ? 'Male' : 'Female'}</td>
+                                    <td>${item?.active == true ? 'Active' : 'Deactive'}</td>
+                                    <td>${item?.totalPost}</td>
+                                    <td>${item?.totalComment}</td>
+                                    <td>
+                                        <button
+                                         class="w3-button w3-black"
+                                         data-role-id = "${item?.role}"
+                                         data-active-user = "${item?.active}"
+                                         data-user-id = "${item?.id}"
+                                         onclick="detailUser(this)"
+                                         >Detail</button>
+                                        </td>
+                                </tr>`
+                                })
+                                $('#idTable').html(tableContent);
+
+                                var pagination = $("#pagination");
+                                pagination.empty();
+
+                                var startPage = Math.max(1, page - 2);
+                                var endPage = Math.min(startPage + 4, totalPages);
+
+                                if (startPage > 1) {
+                                    pagination.append(
+                                        `<li class="page-item"><a class="page-link">...</a></li>`
+                                    )
+                                }
+
+                                for (var i = startPage; i <= endPage; i++) {
+                                    pagination.append(
+                                        `<li class="page-item"><a class="page-link">${i}</a></li>`
+                                    )
+                                }
+
+                                if (endPage < totalPages) {
+                                    pagination.append(
+                                        `<li class="page-item"><a class="page-link">...</a></li>`
+                                    )
+                                }
+
+                                pagination.on("click", "a", function () {
+                                    var clickedPage = parseInt($(this).text());
+
+                                    if (isNaN(clickedPage)) {
+                                        if ($(this).text() === "...") {
+                                            if ($(this).parent().index() === 0) {
+                                                page = Math.max(1, page - 5);
+                                            } else {
+                                                page = Math.min(page + 5, totalPages);
+                                            }
+                                        }
+                                    } else {
+                                        page = clickedPage;
+                                    }
+                                    loadDatatable();
+                                });
+
+
+                            },
+                            error: function (xhr, status, error) {
+                                SlimNotifierJs.notification(
+                                    "error",
+                                    "Error",
+                                    xhr.responseText,
+                                    3000
+                                );
+                            },
+                        });
+                    }
+                    loadDataSearchtable();
+                });
+            }
+
+
+        });
+
+        function getFormattedDate(dateTimeString) {
+            var dateTimeObj = new Date(dateTimeString);
+            var year = dateTimeObj.getFullYear();
+            var month = (dateTimeObj.getMonth() + 1).toString().padStart(2, '0');
+            var day = dateTimeObj.getDate().toString().padStart(2, '0');
+
+            // Định dạng thành dạng yyyy-mm-dd
+            var formattedDate = year + '-' + month + '-' + day;
+
+            return formattedDate;
+        }
+
+
+            var page = 1;
+            var pageSize = 20;
+            function loadDatatable() {
+                console.log(page)
+                $.ajax({
+                    url: "https://localhost:7065/api/Admin/GetListUser?page=" + page + "&pageSize=" + pageSize,
+                    method: "GET",
+                    headers: {
+                        "Authorization": "Bearer " + localStorage.getItem('token')
+                    },
+                    contentType: "application/json",
+                    success: function (response) {
+                        var data = response.results;
+                        var totalPages = response.totalPage;
+                        let tableContent = '';
+                        data.map((item, index) => {
+                            tableContent += `<tr>
+                                    <td>${index}</td>
+                                    <td>${item?.id}</td>
+                                    <td><img src="${item?.avatar}"/></td>
+                                    <td>${item?.displayName}</td>
+                                    <td>${item?.name}</td>
+                                    <td>${item?.role}</td>
+                                    <td>${item?.phoneNumber}</td>
+                                    <td>${item?.email}</td>
+                                    <td>${getFormattedDate(item?.birth)}</td>
+                                    <td>${item?.gender == true ? 'Male' : 'Female'}</td>
+                                    <td>${item?.active == true ? 'Active' : 'Deactive'}</td>
+                                    <td>${item?.totalPost}</td>
+                                    <td>${item?.totalComment}</td>
+                                    <td>
+                                        <button
+                                         class="w3-button w3-black"
+                                         data-role-id = "${item?.role}"
+                                         data-active-user = "${item?.active}"
+                                         data-user-id = "${item?.id}"
+                                         onclick="detailUser(this)"
+                                         >Detail</button>
+                                        </td>
+                                </tr>`
+                        })
+                        $('#idTable').html(tableContent);
+
+                        var pagination = $("#pagination");
+                        pagination.empty();
+
+                        var startPage = Math.max(1, page - 2);
+                        var endPage = Math.min(startPage + 4, totalPages);
+
+                        if (startPage > 1) {
+                            pagination.append(
+                                `<li class="page-item"><a class="page-link">...</a></li>`
+                            )
+                        }
+
+                        for (var i = startPage; i <= endPage; i++) {
+                            pagination.append(
+                                `<li class="page-item"><a class="page-link">${i}</a></li>`
+                            )
+                        }
+
+                        if (endPage < totalPages) {
+                            pagination.append(
+                                `<li class="page-item"><a class="page-link">...</a></li>`
+                            )
+                        }
+
+                        pagination.on("click", "a", function () {
+                            var clickedPage = parseInt($(this).text());
+
+                            if (isNaN(clickedPage)) {
+                                if ($(this).text() === "...") {
+                                    if ($(this).parent().index() === 0) {
+                                        page = Math.max(1, page - 5);
+                                    } else {
+                                        page = Math.min(page + 5, totalPages);
+                                    }
+                                }
+                            } else {
+                                page = clickedPage;
+                            }
+                            loadDatatable();
+                        });
+
+
+                    },
+                    error: function (xhr, status, error) {
+                        SlimNotifierJs.notification(
+                            "error",
+                            "Error",
+                            xhr.responseText,
+                            3000
+                        );
+                    },
+                });
+            }
+
+    </script>
+    <!-- Nhúng footer -->
+    <div id="footer"></div>
+</body>
+
+</html>

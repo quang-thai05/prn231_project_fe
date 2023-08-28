@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Basic -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<!-- Mobile Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+	<!-- Site Metas -->
+	<title>Tech Blog - Stylish Magazine Blog Template</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+
+	<!-- Site Icons -->
+	<link rel="shortcut icon" href="../images/favicon.ico" type="../image/x-icon" />
+	<link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
+
+	<!-- Design fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" />
+
+	<!-- Bootstrap core CSS -->
+	<link href="../css/bootstrap.css" rel="stylesheet" />
+
+	<!-- FontAwesome Icons core CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- Custom styles for this template -->
+	<link href="../css/style.css" rel="stylesheet" />
+
+	<!-- Responsive styles for this template -->
+	<link href="../css/responsive.css" rel="stylesheet" />
+
+	<!-- Colors for this template -->
+	<link href="../css/colors.css" rel="stylesheet" />
+
+	<!-- Version Tech CSS for this template -->
+	<link href="../css/version/tech.css" rel="stylesheet" />
+
+	<style>
+		figure img {
+			width: 825px;
+		}
+
+		.blog-content img {
+			width: 825px;
+		}
+
+		blockquote {
+			font-style: italic;
+			font-weight: 600;
+			text-align: center;
+			line-height: 1.7;
+			font-size: 30px;
+		}
+	</style>
+
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v17.0"
+		nonce="8PFNIzk8"></script>
+</head>
+
+<body>
+	<div id="wrapper">
+		<!-- Nhúng header -->
+		<div id="header"></div>
+
+		<section class="section single-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+						<div class="page-wrapper">
+							<div class="blog-title-area text-center">
+								<ol class="breadcrumb hidden-xs-down">
+									<li class="breadcrumb-item">
+										<a href="#">Home</a>
+									</li>
+									<li class="breadcrumb-item">
+										<a href="#">Blog</a>
+									</li>
+								</ol>
+
+								<span id="post-cate" class="color-orange"></span>
+
+								<h3 id="post-title"></h3>
+
+								<div id="post-info" class="blog-meta big-meta"></div>
+								<!-- end meta -->
+
+								<div class="post-sharing">
+									<ul class="list-inline">
+										<li>
+											<a class="fb-button btn btn-primary fb-button-up"><i
+													class="fa fa-facebook"></i>
+												<span class="down-mobile">Share on Facebook</span></a>
+										</li>
+										<li>
+											<a class="tw-button btn btn-primary tw-button-up"><i
+													class="fa fa-twitter"></i>
+												<span class="down-mobile">Tweet on Twitter</span></a>
+										</li>
+										<li>
+											<a class="bookmark-btn-up gp-button btn btn-primary"
+												style="cursor: pointer;">
+												<i class="fa-regular fa-bookmark"></i>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<!-- end post-sharing -->
+							</div>
+							<!-- end title -->
+
+							<div class="single-post-media"></div>
+							<!-- end media -->
+
+							<div class="blog-content">
+							</div>
+							<!-- end content -->
+
+							<div class="blog-title-area">
+								<div class="post-sharing">
+									<ul class="list-inline">
+										<li>
+											<a class="fb-button btn btn-primary fb-button-down"><i
+													class="fa fa-facebook"></i>
+												<span class="down-mobile">Share on Facebook</span></a>
+										</li>
+										<li>
+											<a class="tw-button btn btn-primary tw-button-down"><i
+													class="fa fa-twitter"></i>
+												<span class="down-mobile">Tweet on Twitter</span></a>
+										</li>
+										<li>
+											<a class="bookmark-btn-down gp-button btn btn-primary"
+												style="cursor: pointer;">
+												<i class="fa-regular fa-bookmark"></i>
+											</a>
+										</li>
+										<li style="margin-left: 200px;">
+											<a onclick="likePost()">
+												<i class="fa-regular fa-thumbs-up fa-2xl" style="cursor: pointer;"></i>
+												<span class="like-count">0</span>
+											</a>
+										</li>
+										<li style=" margin-left: 20px;">
+											<a onclick="dislikePost()">
+												<i class="fa-regular fa-thumbs-down fa-2xl"
+													style="cursor: pointer;"></i>
+												<span class="dislike-count">0</span>
+											</a>
+										</li>										
+									</ul>
+								</div>
+								<!-- end post-sharing -->
+							</div>
+							<!-- end title -->
+
+							<hr class="invis1" />
+
+							<div class="custombox prevnextpost clearfix"></div>
+							<!-- end author-box -->
+
+							<hr class="invis1" />
+
+							<div class="custombox clearfix">
+								<h4 class="small-title" id="totalComment">0 Comments</h4>
+								<div id="replyComment"></div>
+								<div class="d-flex flex-row add-comment-section mt-4 mb-4">
+									<a class="media-left" href="#" style="margin-right: 10px;">
+										<img src="../upload/author.jpg" alt=""
+											class="img-fluid img-responsive rounded-circle mr-2" width="38" />
+									</a>
+									<input id="contentComment" type="text" class="form-control mr-3"
+										placeholder="Add comment">
+									<div id="btnUpdate" style="display: flex;">
+										<button class="btn btn-primary" onclick="AddComment(this)" id="btnComment"
+											type="button">Comment</button>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-12">
+										<div class="comments-list" id="idComment">
+										</div>
+									</div>
+									<!-- end col -->
+									<div class="row">
+										<div class="col-md-12">
+											<nav aria-label="Page navigation">
+												<ul id="pagination" class="pagination justify-content-start">
+
+												</ul>
+											</nav>
+										</div><!-- end col -->
+									</div><!-- end row -->
+								</div>
+
+								<!-- end row -->
+							</div>
+							<!-- end custom-box -->
+
+							<hr class="invis1" />
+						</div>
+						<!-- end page-wrapper -->
+					</div>
+					<!-- end col -->
+
+					<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+						<div class="sidebar">
+							<div class="widget">
+								<div class="banner-spot clearfix">
+									<div class="banner-img">
+										<img src="../upload/banner_07.jpg" alt="" class="img-fluid" />
+									</div>
+									<!-- end banner-img -->
+								</div>
+								<!-- end banner -->
+							</div>
+							<!-- end widget -->
+
+							<div class="widget">
+								<h2 class="widget-title">Popular Posts</h2>
+								<div class="blog-list-widget">
+									<div id="popular-post" class="list-group"></div>
+								</div>
+								<!-- end blog-list -->
+							</div>
+							<!-- end widget -->
+
+							<div class="widget">
+								<h2 class="widget-title">Follow Us</h2>
+
+								<div class="row text-center">
+									<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+										<a href="#" class="social-button facebook-button">
+											<i class="fa fa-facebook"></i>
+											<p>27k</p>
+										</a>
+									</div>
+
+									<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+										<a href="#" class="social-button twitter-button">
+											<i class="fa fa-twitter"></i>
+											<p>98k</p>
+										</a>
+									</div>
+
+									<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+										<a href="#" class="social-button google-button">
+											<i class="fa fa-google-plus"></i>
+											<p>17k</p>
+										</a>
+									</div>
+
+									<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+										<a href="#" class="social-button youtube-button">
+											<i class="fa fa-youtube"></i>
+											<p>22k</p>
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- end widget -->
+
+							<div class="widget">
+								<div class="banner-spot clearfix">
+									<div class="banner-img">
+										<img src="../upload/banner_03.jpg" alt="" class="img-fluid" />
+									</div>
+									<!-- end banner-img -->
+								</div>
+								<!-- end banner -->
+							</div>
+							<!-- end widget -->
+						</div>
+						<!-- end sidebar -->
+					</div>
+					<!-- end col -->
+				</div>
+				<!-- end row -->
+			</div>
+			<!-- end container -->
+		</section>
+
+		<!-- Nhúng footer -->
+		<div id="footer"></div>
+
+		<div class="dmtop">Scroll to Top</div>
+	</div>
+	<!-- end wrapper -->
+
+	<!-- Core JavaScript
+    ================================================== -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/tether.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/custom.js"></script>
+	<script src="../js/slim_notifier.js"></script>
+	<!-- <script src="../js/jwt-decode.js"></script> -->
+	<script>
+		$(() => {
+			$("#header").load("../Utils/header.html");
+			$("#footer").load("../Utils/footer.html");
+		});
+	</script>
+	<script src="../js/jwt-decode.js"></script>
+	<script src="../js/post.js"></script>
+	<script src="../js/comment.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,480 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<title>Tech Blog - Stylish Magazine Blog Template</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content=""> -->
+<!-- Site Icons -->
+
+<head>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Design fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../Quill/quill.snow.css" rel="stylesheet">
+    <!-- FontAwesome Icons core CSS -->
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/loading.css" rel="stylesheet">
+
+    <!-- FontAwesome Icons core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom styles for this template -->
+    <link href="../css/style.css" rel="stylesheet">
+
+    <!-- Responsive styles for this template -->
+    <link href="../css/responsive.css" rel="stylesheet">
+    <!-- Colors for this template -->
+    <link href="../css/colors.css" rel="stylesheet">
+
+    <!-- Version Tech CSS for this template -->
+    <link href="../css/version/tech.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    <style>
+        body {
+            font-family: 'Poppins', serif !important;
+            background-color: #f1f1f1;
+        }
+
+        .card {
+            max-width: 100%;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card table {
+            width: 100%;
+            table-layout: fixed;
+        }
+
+
+        .card td {
+            text-align: justify;
+            word-wrap: break-word;
+        }
+
+        #postDescription {
+            white-space: pre-wrap;
+        }
+
+        .card p {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        .card img {
+            max-width: 50%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .card-title {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .card-meta {
+            font-style: italic;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        table td,
+        table th {
+            font-family: 'Poppins', serif !important;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        thead th {
+            color: #fff;
+            padding-right: 200px;
+        }
+
+
+        .table-scroll {
+            border-radius: .5rem;
+        }
+
+        .table-scroll table thead th {
+            font-size: 16px;
+        }
+
+        thead {
+            top: 0;
+        }
+
+        textarea,
+        select,
+        option {
+            background-color: #fff;
+            border: black;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            width: 100%;
+            height: auto;
+        }
+
+        button {
+
+            color: #ddd;
+            background-color: #337ab7;
+            border: black;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            width: 40%;
+            height: 60px;
+            text-align: center;
+        }
+
+        input#buttonEdit.profile-edit-btn {
+            color: #ffffff !important;
+            background: rgba(0, 0, 0, 0) linear-gradient(to right, #0091e5 0px, #00b7e5 100%) repeat scroll 0 0 !important;
+            border: none;
+            border-radius: 1.5rem;
+            width: 10%;
+            padding: 5px;
+            font-weight: 600;
+            height: 50px;
+            cursor: pointer;
+
+        }
+
+        #uploadButton {
+            color: #000000 !important;
+
+            border: none;
+            border-radius: 1.5rem;
+            width: 70%;
+            padding: 2%;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        #uploadButton::-webkit-file-upload-button {
+            visibility: hidden;
+        }
+
+        #uploadButton::before {
+            display: inline-block;
+            padding: 10px 20px;
+            background: rgba(0, 0, 0, 0) linear-gradient(to right, #0091e5 0px, #00b7e5 100%) repeat scroll 0 0 !important;
+            color: #ffffff;
+            border-radius: 1.5rem;
+            cursor: pointer;
+        }
+
+        #uploadButton:valid::before {
+            content: "Upload Image" attr(value);
+        }
+
+        #loader {
+            display: none;
+        }
+
+        #toolbar-container.ql-toolbar.ql-snow {
+            overflow: visible;
+            display: flex;
+            flex-flow: wrap;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="loader">
+
+    </div>
+    <div id="data">
+        <div id="header"></div>
+        <div id="wrapper" style="margin-top: 100px;">
+            <div style="display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: baseline;">
+                <h2 style=" width: 1500px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                    Update Post : <span id="postTitleHeading"></span></h2>
+            </div>
+            <form id="postForm" class="card col-lg-10">
+                <table class="table col-lg-10">
+                    <tr>
+                        <th>Category</th>
+                        <td><select id="postCategorySelect">
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Image</th>
+                        <td><img id="postImage" src="">
+                            <br>
+                            <input class="profile-edit-btn" type="file" id="uploadButton">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Title</th>
+                        <td><textarea id="postTitle"></textarea></td>
+                    </tr>
+                    <tr>
+                        <th>Slug</th>
+                        <td><textarea id="postSlug"></textarea></td>
+                    </tr>
+                    <tr>
+                        <th>Description</th>
+                        <td><textarea id="postDescription"></textarea></td>
+                    </tr>
+                    <tr>
+                        <th>Content</th>
+                        <td>
+                            <div class="centered">
+                                <div id="toolbar-container">
+                                    <span class="ql-formats">
+                                        <select class="ql-font"></select>
+                                        <select class="ql-size"></select>
+                                    </span>
+                                    <span class="ql-formats">
+                                        <button class="ql-bold"></button>
+                                        <button class="ql-italic"></button>
+                                        <button class="ql-underline"></button>
+                                        <button class="ql-strike"></button>
+                                    </span>
+                                    <span class="ql-formats">
+                                        <select class="ql-color"></select>
+                                        <select class="ql-background"></select>
+                                    </span>
+                                    <span class="ql-formats">
+                                        <button class="ql-header" value="1"></button>
+                                        <button class="ql-header" value="2"></button>
+                                        <button class="ql-blockquote"></button>
+                                        <button class="ql-code-block"></button>
+                                    </span>
+                                    <span class="ql-formats">
+                                        <button class="ql-list" value="ordered"></button>
+                                        <button class="ql-list" value="bullet"></button>
+                                        <button class="ql-indent" value="-1"></button>
+                                        <button class="ql-indent" value="+1"></button>
+                                    </span>
+                                    <span class="ql-formats">
+                                        <button class="ql-direction" value="rtl"></button>
+                                        <select class="ql-align"></select>
+                                    </span>
+                                    <span class="ql-formats">
+                                        <button class="ql-link"></button>
+                                        <button class="ql-image"></button>
+                                        <button class="ql-video"></button>
+                                        <button class="ql-formula"></button>
+                                    </span>
+                                    <span class="ql-formats">
+                                        <button class="ql-clean"></button>
+                                    </span>
+                                </div>
+                                <div id="editor">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td><textarea id="postAuthor"></textarea></td>
+                    </tr>
+                </table>
+                <div style="display: flex;">
+                    <input class="profile-edit-btn" id="buttonEdit" style="margin-left: 670px;" type="submit"
+                        value="Save">
+                    <input class="profile-edit-btn" id="buttonEdit" style="margin-left: 100px;" type="submit"
+                        value="Cancel">
+                </div>
+            </form>
+
+
+        </div><!-- end wrapper -->
+        <div id="footer"></div>
+    </div>
+    <!-- Core JavaScript
+        ================================================== -->
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(() => {
+            $("#header").load("../Utils/header.html")
+            $("#footer").load("../Utils/footer.html")
+        })
+    </script>
+    <script src="../js/tether.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/custom.js"></script>
+    <script src="../Quill/quill.js"></script>
+    <script>
+        var quill = new Quill('#editor', {
+            modules: {
+                toolbar: '#toolbar-container'
+            },
+            theme: 'snow'
+        });
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            function showLoadingPage() {
+                document.getElementById("loader").style.display = "block";
+                document.getElementById("data").style.display = "none";
+            }
+
+            function hideLoadingPage() {
+                document.getElementById("loader").style.display = "none";
+                document.getElementById("data").style.display = "block";
+            }
+
+            var urlParams = new URLSearchParams(window.location.search);
+            var Id = urlParams.get('postId');
+            function loadPostData() {
+                showLoadingPage();
+                $.ajax({
+                    url: 'https://localhost:7065/api/Post/GetPostById/' + Id,
+                    method: 'GET',
+                    dataType: 'json',
+                    success: function (response) {
+                        var post = response;
+                        $('#postTitleHeading').text(post.title);
+                        $('#postTitle').val(post.title);
+                        $('#postSlug').val(post.slug);
+                        $('#postImage').attr('src', post.ogImageUrl);
+                        $('#postAuthor').val(post.authorName);
+                        $('#postDescription').val(post.description);
+                        postId = post.postId;
+                        quill.clipboard.dangerouslyPasteHTML(post.content);
+                        $.ajax({
+                            url: 'https://localhost:7065/api/Category/GetAllCat',
+                            method: 'GET',
+                            dataType: 'json',
+                            success: function (categoriesResponse) {
+                                var categories = categoriesResponse;
+                                var selectCategory = $('#postCategorySelect');
+                                categories.forEach(function (category) {
+                                    var option = $('<option></option>').val(category.id).text(category.name);
+                                    if (category.id === post.catId) {
+                                        option = $('<option selected="selected"></option>').val(category.id).text(category.name);
+                                    }
+
+                                    selectCategory.append(option);
+                                });
+                                hideLoadingPage();
+                            },
+                            error: function (xhr, status, error) {
+                                alert('Category Error!');
+                                console.log('AJAX Error: ' + error);
+                            }
+                        });
+
+                    },
+                    error: function (xhr, status, error) {
+                        alert('Post Error!');
+                        console.log('AJAX Error: ' + error);
+                    }
+                });
+            }
+
+            function handleFormSubmit(event) {
+                showLoadingPage();
+                event.preventDefault();
+                var urlParams = new URLSearchParams(window.location.search);
+                var Id = urlParams.get('postId');
+                var editorElement = document.querySelector('.ql-editor');
+                var c = editorElement.innerHTML;
+                var formData = {
+                    id: parseInt(Id),
+                    postId: postId,
+                    categoryId: parseInt(document.getElementById("postCategorySelect").value),
+                    title: document.getElementById("postTitle").value,
+                    slug: document.getElementById("postSlug").value,
+                    ogImageUrl: document.getElementById('postImage').src,
+                    description: document.getElementById("postDescription").value,
+                    content: c,
+                    author: document.getElementById("postAuthor").value
+                };
+                var JWTToken = localStorage.getItem("token");
+                console.log(JSON.stringify(formData));
+                console.log(JWTToken);
+
+                var updateApiUrl = "https://localhost:7065/api/Post/UpdatePost";
+                fetch(updateApiUrl, {
+                    method: 'POST',
+                    mode: "cors",
+                    headers: {
+                        "Content-Type": "application/json",
+                        'Authorization': "Bearer " + JWTToken
+                    },
+                    body: JSON.stringify(formData)
+                })
+                    .then(data => {
+                        console.log('Success:', data);
+                        hideLoadingPage();
+                        window.location.href = '../Editor/Post-Detail.html?postId=' + Id;
+
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            }
+
+            window.onload = function () {
+                loadPostData();
+            };
+
+
+            document.getElementById('uploadButton').addEventListener('change', function (event) {
+                var file = event.target.files[0];
+
+                if (file && file.type.startsWith('image/')) {
+                    var reader = new FileReader();
+
+                    reader.onload = function () {
+                        var imgDataUrl = reader.result;
+
+                        var imgElement = document.getElementById('postImage');
+                        imgElement.src = imgDataUrl;
+                    };
+
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            $('#postForm').submit(handleFormSubmit);
+            loadPostData();
+        });
+    </script>
+</body>

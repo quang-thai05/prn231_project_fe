@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Site Metas -->
+    <title>Tech Blog - Stylish Magazine Blog Template</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> -->
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+    <!------ Include the above in your HEAD tag ---------->
+
+    <!-- Design fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- FontAwesome Icons core CSS -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/userProfile.css" rel="stylesheet">
+    <!-- FontAwesome Icons core CSS -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Responsive styles for this template -->
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <!-- Colors for this template -->
+    <link href="css/colors.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Version Tech CSS for this template -->
+    <link href="css/version/tech.css" rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body>
+    <!-- Nhúng header -->
+    <div id="header"></div>
+    <div style="margin-top: 5%;" class="container emp-profile">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog"
+                        id="imgAvatar" alt="" />
+                    <div class="file btn btn-lg btn-primary">
+                        Change avatar
+                        <input id="fileInput" type="file" name="file" />
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="profile-head">
+                    <h5 id="displayNameTitle">
+
+                    </h5>
+                    <h6>
+                        Web Developer and Designer
+                    </h6>
+                    <!-- <p class="proile-rating">RANKINGS : <span>8/10</span></p> -->
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                aria-controls="home" aria-selected="true">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                aria-controls="profile" aria-selected="false">Total</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="posts-tab" data-toggle="tab" href="#posts" role="tab"
+                                aria-controls="posts" aria-selected="false">Post</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="change-password-tab" data-toggle="tab" href="#changePassword"
+                                role="tab" aria-controls="changePassword" aria-selected="false">Password</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary" type="button" class="profile-edit-btn"
+                    onclick="handleChangeProfileUser()" name="btnAddMore" id="submitbtn">Edit Profile </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-work">
+                    <p>WORK LINK</p>
+                    <a href="">Website Link</a><br />
+                    <p>SKILLS</p>
+                    <a href="">Web Designer</a><br />
+                    <a href="">Web Developer</a><br />
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="tab-content profile-tab" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>UserName</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input required placeholder="Input your user name" readonly name="userName"
+                                    id="userName" />
+                                <small id="usercheck" style="color: red;">
+                                    **Username is missing
+                                </small>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Display Name</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input placeholder="Input your display name" name="displayName" id="displayName" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Email</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input required placeholder="Input your email" readonly name="email" id="email" />
+                                <small id="emailvalid" class="form-text text-muted invalid-feedback"
+                                    style="color: red;">
+                                    Your email must be a valid email
+                                </small>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Phone Number</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input placeholder="Input your phone number" name="phoneNumber" id="phoneNumber" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Birthdate</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="date" name="birth" id="birth" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Gender</label>
+                            </div>
+                            <div class="col-md-2">
+                                <input type="radio" name="gender" id="gender1" value="Male" /> Male
+                            </div>
+                            <div class="col-md-2">
+                                <input type="radio" name="gender" id="gender2" value="Female" /> Female
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Total Post</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input style="border: 0px;" readonly name="totalPost" id="totalPost" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Total Comment</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input style="border: 0px;" readonly name="totalComment" id="totalComment" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Total View</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input style="border: 0px;" readonly name="totalView" id="totalView" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Total Point</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input style="border: 0px;" readonly name="totalPoint" id="totalPoint" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="posts" role="tabpanel" aria-labelledby="posts-tab">
+                        <div class="page-content page-container" id="page-content">
+                            <div class="padding">
+                                <div class="row container d-flex justify-content-center">
+                                    <div class="col-md-12">
+                                        <div class="box">
+                                            <!-- /.box-header -->
+                                            <div class="box-body">
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="width: 10px">#</th>
+                                                            <th>Title</th>
+                                                            <th>Comment</th>
+                                                            <th>Created At</th>
+                                                            <th>Views</th>
+                                                            <th>Point</th>
+                                                            <th style="width: 40px">Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="idTable">
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- /.box-body -->
+                                            <div class="box-footer clearfix">
+                                                <ul class="pagination pagination-sm no-margin pull-right"
+                                                    id="pagination">
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="changePassword" role="tabpanel"
+                        aria-labelledby="change-password-tab">
+                        <form id="changePasswordForm" class="needs-validation" novalidate>
+                            <div class="mb-3">
+                                <label for="oldPassword" class="form-label">Current Password</label>
+                                <input type="password" class="form-control" id="oldPassword" required
+                                    style="border: 1px solid black">
+                                <div class="invalid-feedback">
+                                    Please enter your current password.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="newPassword" class="form-label">New Password</label>
+                                <input type="password" class="form-control" id="newPassword" required
+                                    style="border: 1px solid black">
+                                <div class="invalid-feedback">
+                                    Please enter a new password.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                <input type="password" class="form-control" id="confirmPassword" required
+                                    style="border: 1px solid black">
+                                <div class="invalid-feedback">
+                                    Please confirm your new password.
+                                </div>
+                                <div class="invalid-feedback mismatch-feedback">
+                                    New password and confirm password must match.
+                                </div>
+                            </div>
+                            <button type="button" onclick="handleChangePassword()" class="btn btn-primary">Change
+                                Password</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Nhúng footer -->
+    <div id="footer"></div>
+
+    <script src="js/bootstrap.min.js"></script>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
+
+    <script src="js/user_proflie.js">
+    </script>
+    <script>
+        $(() => {
+            $("#header").load("Utils/header.html")
+            $("#footer").load("Utils/footer.html")
+        })
+
+
+        const handleChangePassword = () => {
+            const oldPassword = $("#oldPassword").val();
+            const newPassword = $("#newPassword").val();
+            const confirmPassword = $("#confirmPassword").val();
+            if (oldPassword == "" || newPassword == "" || confirmPassword == "") {
+                alert("Can not be empty")
+                return;
+            }
+            if (newPassword != confirmPassword) {
+                alert("Confirm password not match")
+                return;
+            }
+            const data = {
+                oldPassword,
+                newPassword
+            }
+            apiClient({
+                url: "https://localhost:7065/api/User/ChangePasswordUser",
+                headers: {
+                    "Authorization": "Bearer " + localStorage.getItem('token')
+                },
+                method: "POST",
+                data
+            }, (response) => {
+                if (response === true) {
+                    localStorage.removeItem('token')
+                    setTimeout(() => {
+                        window.location.href = "../auth/login-form.html"
+                    }, 1000)
+                    SlimNotifierJs.notification('success', 'Successfully', 'Redirecting...', 1000)
+                } else {
+                    SlimNotifierJs.notification('error', 'Error', 'Current password not match', 2000)
+                }
+            }, (error) => {
+                SlimNotifierJs.notification('error', 'Error', 'Change password failed!', 2000)
+            })
+        }
+
+        const handleChangeProfileUser = () => {
+            const userName = $("#userName").val();
+            const displayName = $("#displayName").val();
+            const phoneNumber = $("#phoneNumber").val();
+            const email = $("#email").val();
+            const birth = $("#birth").val();
+            let gender = "";
+
+            if ($("#gender1").is(":checked")) {
+                gender = true;
+            }
+            if ($("#gender2").is(":checked")) {
+                gender = false;
+            }
+            const avatar = $("#avatar").val();
+
+            // var pathParts = avatar.split("\\");
+
+            // var fileName = pathParts[pathParts.length - 1];
+
+            const data = {
+                userName,
+                displayName,
+                email,
+                birth,
+                gender,
+                phoneNumber
+            }
+            console.log(data)
+            apiClient({
+                url: "https://localhost:7065/api/User/UpdateUserProfile",
+                headers: {
+                    "Authorization": "Bearer " + localStorage.getItem('token')
+                },
+                method: "POST",
+                data
+            }, (response) => {
+                if (response === true) {
+                    SlimNotifierJs.notification('success', 'Successfully', 'Update successful', 2000)
+                    // localStorage.removeItem('token')
+                    // setTimeout(() => {
+                    //     window.location.href = "../auth/login-form.html"
+                    // }, 1000)
+                    setTimeout(function () {
+                        window.location.reload(1);
+                    }, 1000);
+
+                } else {
+                    SlimNotifierJs.notification('error', 'Error', 'Update failed!', 2000)
+                }
+            })
+        }
+
+        const apiClient = ({ url, data, method }, successFnc, errorFnc) =>
+            $.ajax({
+                url: url,
+                method: method || "GET",
+                contentType: "application/json",
+                headers: {
+                    "Authorization": "Bearer " + localStorage.getItem('token')
+                },
+                data: JSON.stringify(data),
+                success: function (response) {
+                    successFnc(response)
+                },
+                error: function (xhr, status, error) {
+                    errorFnc(error)
+                },
+            });
+
+
+        const handlePagination = (totalPage) => {
+            let pagination = "";
+            Array.from(Array(totalPage)).map((_, index) => {
+                pagination += `<li><a href="#" data-abc="true" onclick="handlePagePagination(${index + 1})">${index + 1}</a></li>`
+            })
+            $('#pagination').html(pagination)
+        }
+        function padTo2Digits(num) {
+            return num.toString().padStart(2, '0');
+        }
+
+        function formatDate(date) {
+            return [
+                padTo2Digits(date.getDate()),
+                padTo2Digits(date.getMonth() + 1),
+                date.getFullYear(),
+            ].join('/');
+        }
+        const handleDataTable = (data) => {
+            let tableContent = '';
+            data.results.map((item, index) => {
+                tableContent += `<tr>
+                                    <td>${index}</td>
+                                    <td>${item?.title}</td>
+                                    <td>${item?.commentCount}</td>
+                                    <td>${formatDate(new Date(item?.createdAt))}</td>
+                                    <td>${item?.viewsCount}</td>
+                                    <td>
+                                        ${item?.point}
+                                    </td>
+                                    <td>
+                                        <button
+                                            class="w3-button w3-black"
+                                            ><a href="./Editor/Post-Detail.html?postId=${item?.id}" title="">Detail</a></button>
+                                    </td>
+                                </tr>`
+            })
+            $('#idTable').html(tableContent);
+        }
+
+        $(document).ready(() => {
+            const url = `https://localhost:7065/api/User/GetListPostOfUser?page=1&pageSize=5`
+            apiClient({ url: url }, (data) => {
+                handleDataTable(data)
+                handlePagination(data.totalPage)
+            })
+        });
+        const handlePagePagination = (pageNumber) => {
+            const url = `https://localhost:7065/api/User/GetListPostOfUser?page=${pageNumber}&pageSize=5`
+            apiClient({ url: url }, (data) => {
+                handleDataTable(data)
+            })
+
+        }
+    </script>
+    <script src="./js/validation_user.js"></script>
+
+    <script>
+        $(document).on('change', '#fileInput', function () {
+            var fileInput = document.getElementById('fileInput');
+            var file = fileInput.files[0];
+
+            var formData = new FormData();
+            formData.append('imageFile', file);
+
+            // Thực hiện yêu cầu Ajax bằng jQuery
+            $.ajax({
+                url: 'https://localhost:7065/api/User/uploadimage',
+                type: 'POST',
+                data: formData,
+                headers: {
+                    "Authorization": "Bearer " + localStorage.getItem('token')
+                },
+                contentType: false,
+                processData: false,
+                success: function (data) {
+                    SlimNotifierJs.notification('success', 'Successfully', 'Update image successful', 1000)
+                },
+                error: function () {
+                    SlimNotifierJs.notification('error', 'Error', 'Update error', 1000)
+
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

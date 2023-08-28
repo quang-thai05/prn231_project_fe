@@ -1,0 +1,413 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<title>Tech Blog - Stylish Magazine Blog Template</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content=""> -->
+<!-- Site Icons -->
+
+<head>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Design fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+
+    <!-- FontAwesome Icons core CSS -->
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/style.css" rel="stylesheet">
+
+    <!-- Responsive styles for this template -->
+    <link href="../css/responsive.css" rel="stylesheet">
+
+    <!-- Colors for this template -->
+    <link href="../css/colors.css" rel="stylesheet">
+
+    <!-- Version Tech CSS for this template -->
+    <link href="../css/version/tech.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <style>
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .pagination li {
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        .pagination li a {
+            padding: 5px 10px;
+            text-decoration: none;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .pagination li.active a {
+            background-color: #337ab7;
+            color: #fff;
+        }
+
+        table {
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        table td,
+        table th {
+            font-family: 'Poppins', serif !important;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        table td {
+            text-align: justify;
+            word-wrap: break-word;
+        }
+
+        thead th {
+            color: #fff;
+        }
+
+        .card {
+            border-radius: .5rem;
+        }
+
+        .table-scroll {
+            border-radius: .5rem;
+        }
+
+        .table-scroll table thead th {
+            font-size: 1.25rem;
+        }
+
+        thead {
+            top: 0;
+            position: sticky;
+        }
+    </style>
+
+    <div id="wrapper ">
+        <section class="intro" style="height: 100%;">
+            <div class="bg-image h-100">
+                <div class="mask d-flex align-items-center h-100">
+                    <div class="container">
+                        <div class="row justify-content-center" style="margin-top: 100px;">
+                            <div class="col-lg-12">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="All-tab" data-toggle="tab" href="#All" role="tab"
+                                            aria-controls="All" aria-selected="true">All</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="Process-tab" data-toggle="tab" href="#Process"
+                                            role="tab" aria-controls="Process" aria-selected="false">Process</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="Denied-tab" data-toggle="tab" href="#Denied" role="tab"
+                                            aria-controls="Denied" aria-selected="false">Denied</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="Accept-tab" data-toggle="tab" href="#Accept" role="tab"
+                                            aria-controls="Accept" aria-selected="false">Accept</a>
+                                    </li>
+                                </ul>
+
+                                <div class="tab-content profile-tab" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="All" role="tabpanel"
+                                        aria-labelledby="All-tab">
+                                        <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true"
+                                            style="position: relative; height: 700px">
+                                            <table class="table table-striped mb-0">
+                                                <thead
+                                                    style="background: rgba(0, 0, 0, 0) linear-gradient(to right, #0091e5 0px, #00b7e5 100%) repeat scroll 0 0 !important">
+                                                    <tr class="text-center">
+                                                        <th scope="col" class="text-center">No.</th>
+                                                        <th scope="col" class="text-center">Title</th>
+                                                        <th scope="col" class="text-center">Status</th>
+                                                        <th scope="col" class="text-center">Author</th>
+                                                        <th scope="col" class="text-center">Category</th>
+                                                        <th scope="col" class="text-center">Created Date</th>
+                                                        <th scope="col" class="text-center">Modified Date</th>
+                                                        <th scope="col"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="tableBody" id="allBody">
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="Process" role="tabpanel"
+                                        aria-labelledby="Process-tab">
+                                        <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true"
+                                            style="position: relative; height: 700px">
+                                            <table class="table table-striped mb-0">
+                                                <thead
+                                                    style="background: rgba(0, 0, 0, 0) linear-gradient(to right, #0091e5 0px, #00b7e5 100%) repeat scroll 0 0 !important">
+                                                    <tr class="text-center">
+                                                        <th scope="col" class="text-center">No.</th>
+                                                        <th scope="col" class="text-center">Title</th>
+                                                        <th scope="col" class="text-center">Status</th>
+                                                        <th scope="col" class="text-center">Author</th>
+                                                        <th scope="col" class="text-center">Category</th>
+                                                        <th scope="col" class="text-center">Created Date</th>
+                                                        <th scope="col" class="text-center">Modified Date</th>
+                                                        <th scope="col"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="tableBody" id="processBody">
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="Denied" role="tabpanel" aria-labelledby="Denied-tab">
+                                        <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true"
+                                            style="position: relative; height: 700px">
+                                            <table class="table table-striped mb-0">
+                                                <thead
+                                                    style="background: rgba(0, 0, 0, 0) linear-gradient(to right, #0091e5 0px, #00b7e5 100%) repeat scroll 0 0 !important">
+                                                    <tr class="text-center">
+                                                        <th scope="col" class="text-center">No.</th>
+                                                        <th scope="col" class="text-center">Title</th>
+                                                        <th scope="col" class="text-center">Status</th>
+                                                        <th scope="col" class="text-center">Author</th>
+                                                        <th scope="col" class="text-center">Category</th>
+                                                        <th scope="col" class="text-center">Created Date</th>
+                                                        <th scope="col" class="text-center">Modified Date</th>
+                                                        <th scope="col"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="tableBody" id="deniedBody">
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="Accept" role="tabpanel" aria-labelledby="Accept-tab">
+                                        <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true"
+                                            style="position: relative; height: 700px">
+                                            <table class="table table-striped mb-0">
+                                                <thead
+                                                    style="background: rgba(0, 0, 0, 0) linear-gradient(to right, #0091e5 0px, #00b7e5 100%) repeat scroll 0 0 !important">
+                                                    <tr class="text-center">
+                                                        <th scope="col" class="text-center">No.</th>
+                                                        <th scope="col" class="text-center">Title</th>
+                                                        <th scope="col" class="text-center">Status</th>
+                                                        <th scope="col" class="text-center">Author</th>
+                                                        <th scope="col" class="text-center">Category</th>
+                                                        <th scope="col" class="text-center">Created Date</th>
+                                                        <th scope="col" class="text-center">Modified Date</th>
+                                                        <th scope="col"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="tableBody" id="acceptBody">
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <nav aria-label="Page navigation">
+                                        <ul class="pagination justify-content-start" id="pagination"></ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div><!-- end wrapper -->
+    <div id="footer" style="margin-top: 50px;"></div>
+    <!-- Core JavaScript
+    ================================================== -->
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(() => {
+            $("#header").load("../Utils/header.html")
+            $("#footer").load("../Utils/footer.html")
+        })
+    </script>
+    <script src="../js/tether.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/custom.js"></script>
+    <script src="../js/jwt-decode.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            function formatDate(dateString) {
+                var date = new Date(dateString);
+                return date.toLocaleDateString('en-GB');
+            }
+
+            var page = 1;
+            var pageSize = 12;
+            var status;
+            var tabId;
+
+            var token = localStorage.getItem("token")
+            if (token != null) {
+                var decoded = jwt_decode(token)
+                var userId = decoded["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/sid"];
+            }
+
+            $("#myTab a").on("shown.bs.tab", function (e) {
+                tabId = $(e.target).attr("aria-controls");
+                loadData();
+            });
+
+
+            function loadData() {
+
+                if (tabId === "All") {
+                    status = "All";
+                }
+                if (tabId === "Denied") {
+                    status = "Denied";
+                }
+                if (tabId === "Process") {
+                    status = "Process";
+                }
+                if (tabId === "Accept") {
+                    status = "Accept";
+                }
+
+                $.ajax({
+                    url: 'https://localhost:7065/api/Post/GetAllPostByUserId?userId=' + userId + '&page=' + page + '&pageSize=' + pageSize + '&status=' + status,
+                    method: 'GET',
+                    dataType: 'json',
+                    headers: {
+                        'Authorization': "Bearer " + token
+                    },
+                    success: function (response) {
+
+                        var data = response.posts;
+                        var totalPosts = response.totalPosts;
+                        var totalPages = response.totalPages;
+
+                        var allBody = $('#allBody');
+                        var deniedBody = $('#deniedBody');
+                        var acceptBody = $('#acceptBody');
+                        var processBody = $('#processBody');
+                        allBody.empty();
+                        deniedBody.empty();
+                        acceptBody.empty();
+                        processBody.empty();
+
+                        const rows = data.map((item, index) => {
+                            var statusText = "";
+                            if (item.isEditorPick === null) {
+                                statusText = "processing";
+                            } else if (item.isEditorPick === true) {
+                                statusText = "accept";
+                            } else {
+                                statusText = "denied";
+                            }
+                            return `<tr>
+                                            <td class="text-center">${index + 1}</td>
+                                            <td class="text-center">${item.title}</td>
+                                            <td class="text-center">${statusText}</td>
+                                            <td class="text-center">${item.authorName}</td>
+                                            <td class="text-center">${item.categoryName}</td>
+                                            <td class="text-center">${item.created}</td>
+                                            <td class="text-center">${item.modified}</td>
+                                            <td class="text-center"><a href="../Editor/Post-Detail.html?postId=${item.id}">detail</a></td>
+                                    </tr>`
+                        })
+
+                        if (status === "Process") {
+                            processBody.append(rows);
+                        }
+                        if (status === "Accept") {
+                            acceptBody.append(rows);
+                        }
+                        if (status === "Denied") {
+                            deniedBody.append(rows);
+                        }
+                        else {
+                            allBody.append(rows);
+                        }
+                        var pagination = $('#pagination');
+                        pagination.empty();
+
+                        var startPage = Math.max(1, page - 2);
+                        var endPage = Math.min(startPage + 4, totalPages);
+
+                        if (startPage > 1) {
+                            $('<li class="page-item">').append($('<a class="page-link">').text('...')).appendTo(pagination);
+                        }
+
+                        for (var i = startPage; i <= endPage; i++) {
+                            var li = $('<li class="page-item">');
+                            var link = $('<a class="page-link">').text(i);
+
+                            if (i === page) {
+                                li.addClass('active');
+                            }
+
+                            li.append(link);
+                            pagination.append(li);
+                        }
+
+                        if (endPage < totalPages) {
+                            $('<li class="page-item">').append($('<a class="page-link">').text('...')).appendTo(pagination);
+                        }
+
+                        pagination.on('click', 'a', function () {
+                            var clickedPage = parseInt($(this).text());
+
+                            if (isNaN(clickedPage)) {
+                                if ($(this).text() === '...') {
+                                    if ($(this).parent().index() === 0) {
+                                        page = Math.max(1, page - 5);
+                                    } else {
+                                        page = Math.min(page + 5, totalPages);
+                                    }
+                                }
+                            } else {
+                                page = clickedPage;
+                            }
+
+                            loadData();
+                        });
+                    },
+                    error: function (xhr, status, error) {
+                        console.log('AJAX Error: ' + error);
+                    }
+                });
+            }
+            loadData();
+        });
+    </script>
+</body>
